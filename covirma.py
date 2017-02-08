@@ -8,7 +8,7 @@ import sys
 HELP_SCREEN = '''
 --------------------------------------------------------
 CoVIRMA: Consensus by Voting with Iterative Re-weighting 
-based on Mean Agreement
+based on Agreement
 --------------------------------------------------------
 KREMER, F.S; GRASSMANN, A.A; MCBRIDE, A.J.A; PINTO, L.S.
 --------------------------------------------------------
