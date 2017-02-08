@@ -24,6 +24,8 @@ In this example it is possible to see that the results from the Predictor 1 were
 - Predictor 2: 0.375
 - Predictor 3: 0.4375
 
+Based on the weights calculated for each predictor it is possible to perform an weighted voting and select those results that are more likely to be negatives or positives (eg:threshold = 0.5). 
+
 |Protein ID  | Predictor 1 | Predictor 2 | Predictor 3 | CoVIRA score |
 |:----------:|:-----------:|:-----------:|:-----------:|:------------:|
 |LIC10010    |	         1 |           0 |           0 | 0.1875       |
