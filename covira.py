@@ -7,14 +7,14 @@ import sys
 
 HELP_SCREEN = '''
 --------------------------------------------------------
-CoVIRMA: Consensus by Voting with Iterative Re-weighting 
+CoVIRA: Consensus by Voting with Iterative Re-weighting 
 based on Agreement
 --------------------------------------------------------
 KREMER, F.S; GRASSMANN, A.A; MCBRIDE, A.J.A; PINTO, L.S.
 --------------------------------------------------------
 USAGE:
 
-$ python covirma.py input.txt
+$ python covira.py input.txt
 
 
 THE INPUT FILE:
@@ -113,7 +113,8 @@ def process_file (file):
         valores_programas[file][ids[i]] = valores[-1]
         if valores[-1] > min_score:
             lic_list.append(ids[i])
-    return '\t'.join([str(peso) for peso in pesos])
+    for linha in [peso for peso in enumerate(pesos)]:
+	yield linha
 
 ####VARIABLES
 
@@ -125,7 +126,13 @@ valores_programas = {}
 if __name__ == '__main__':
 	if len(sys.argv) > 1:
 		input = sys.argv[1]
-		print process_file(input)
+		try:
+			print 'PROGRAM\tWEIGHT'
+			print '-------\t-------'
+			for peso in process_file(input):
+				print '{0}\t{1}'.format(peso[0]+1,peso[1])
+		except:
+			sys.stderr.write("""ERROR: Couldn't process the file "{0}"\n""".format(input))
 	else:
 		print HELP_SCREEN
 
