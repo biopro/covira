@@ -7,6 +7,8 @@ import sys
 
 HELP_SCREEN = '''
 --------------------------------------------------------
+                         CoVIRA
+--------------------------------------------------------
 CoVIRA: Consensus by Voting with Iterative Re-weighting 
 based on Agreement
 --------------------------------------------------------
