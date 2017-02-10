@@ -2,6 +2,9 @@
 
 ##About
 
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
 CoVIRA (Consensus by Voting with Iterative Re-weighting based on  Agreement) is an algorithm to generate a consensus prediction based on the results from independent binary predictors by using an unsupervisioned and iterative weighted-voting system. Different from supervisioned ensemble learning methods, such as AdaBoost, CoVIRA doesn't require a dataset of training, as it is based on the measure of the "agreement" between the predictor. As we have no prior knownledge of accuracy of each predictor, we assume that the most accurate will be confirmed more times than those with smaller accuracy, requiring that the degree of accuracy in the set of predictors must be uniform. It is also possible to interpret the results from CoVIRA as a way to me
 
 **Table 1.**Example of a dataset with results from three different predictions for the same protein. 
