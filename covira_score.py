@@ -2,41 +2,34 @@
 
 import shlex
 import sys
-
-####CONSTANTS
-
-HELP_SCREEN = '''
---------------------------------------------------------
-                      CoVIRA Score
---------------------------------------------------------
-CoVIRA: Consensus by Voting with Iterative Re-weighting 
-based on Agreement
---------------------------------------------------------
-KREMER, F.S; GRASSMANN, A.A; MCBRIDE, A.J.A; PINTO, L.S.
---------------------------------------------------------
-USAGE:
-
-$ python covira_score.py input.txt covira_weights.txt
-
-
-THE INPUT FILE:
-
-The input file must be a tab-delimited file where the 
-first field of each lines must be the id of the object 
-that is analyzed and the following fields the results,
-in binary format, from the different predictors. Ex:
-
-PROTEIN_1	1	0	1	1
-PROTEIN_2	1	1	1	0
-PROTEIN_3	0	1	0	1
-
-In this case, there are four different predictions for
-each entry (protein). 
-'''
-min_score = 0.5
+import argparse
+import csv
 
 ####FUNCTIONS
 
+def parseInput(input):
+	inputCsvHandle = open(input)
+	inputCsvParser = csv.reader(inputCsvHandle,
+                                    delimiter='\t')
+	for linha in inputCsvParser:
+		yield linha
+
+def parseWeights(input):
+	weightsCsvHandle = open(input)
+	weightsCsvParser = csv.reader(weightsCsvHandle, 
+                                      delimiter='\t')
+	weightsList = []
+	for linhaIndex, linha in enumerate(weightsCsvParser):
+		if linhaIndex == 0:
+			continue
+		weightsList.append(linha[1])
+	return weightsList
+
+def calculate_vote(linha,weights,threshold):
+	pass
+
+def ranking():
+	pass
 
 ####VARIABLES
 
@@ -46,15 +39,29 @@ valores_programas = {}
 ####MAIN
 
 if __name__ == '__main__':
-	if len(sys.argv) > 1:
-		input = sys.argv[1]
-		try:
-			print 'PROGRAM\tWEIGHT'
-			print '-------\t-------'
-			for peso in process_file(input):
-				print '{0}\t{1}'.format(peso[0]+1,peso[1])
-		except:
-			sys.stderr.write("""ERROR: Couldn't process the file "{0}"\n""".format(input))
-	else:
-		print HELP_SCREEN
+
+	argumentParser = argparse
+	argumentParser = argparse.ArgumentParser(description=(
+	'CoVIRA Score: Voting and Re-ranking based on CoVIRA'))
+	argumentParser.add_argument('-i','--input',required=True)
+	argumentParser.add_argument('-w','--weights',required=True)
+	argumentParser.add_argument('-o','--output')
+	argumentParser.add_argument('-t','--threshold',default=0.5)
+	argumentParser.add_argument('-r','--ranking')
+	arguments = argumentParser.parse_args()
+	input = arguments.input
+	weights = arguments.weights	
+	#define output file (file or STDOUT)
+	
+	if arguments.output:
+
+		sys.stdout = open(arguments.output,'w')
+
+	try:
+		
+	except:
+		sys.stderr.write(("ERROR: Please, check your "
+                                  "input file\n").format(input))
+		sys.exit()
+
 
