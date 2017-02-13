@@ -8,7 +8,7 @@ Frederico Schmitt Kremer, André Alex Grassmann & Luciano da Silva Pinto
 *Capão do Leão, Rio Grande do Sul,*
 *Brazil*
 
-contact: fred.s.kremer@gmail.com*
+contact: fred.s.kremer@gmail.com
 
 *About*
 
