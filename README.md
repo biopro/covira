@@ -48,8 +48,21 @@ Two scripts are included as part of the CoVIRA package: `covira.py` (calculates 
 
 #### covira.py: results to STDOUT
 
-`$ python covira.py dataset.txt`
+`$ python covira.py -i dataset.txt`
 
 #### covira.py: results to file
 
-#### covira_score.py:
+
+`$ python covira.py -i dataset.txt -o weights.txt`
+
+#### covira_score.py: results to STDOUT
+
+`$ python covira.py -i dataset.txt -w weights.txt`
+
+#### covira_score.py: results to file
+
+`$ python covira.py -i dataset.txt -w weights.txt -o scores.txt`
+
+#### covira_score.py: results to file ranked by score
+
+`$ python covira.py -i dataset.txt -w weights.txt -o scores.txt -r`
