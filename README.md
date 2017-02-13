@@ -2,11 +2,13 @@
 
 Frederico Schmitt Kremer, André Alex Grassmann & Luciano da Silva Pinto
 
-Laboratório de Bioinformática e Proteômica, Centro de Desenvolvimento 
-Tecnológico, Universidade Federal de Pelotas,
-Capão do Leão, Rio Grande do Sul, Brasil
+*Laboratório de Bioinformática e Proteômica,*
+*Centro de Desenvolvimento Tecnológico,* 
+*Universidade Federal de Pelotas,*
+*Capão do Leão, Rio Grande do Sul,*
+*Brazil*
 
-*contact: fred.s.kremer@gmail.com*
+contact: fred.s.kremer@gmail.com*
 
 *About*
 
