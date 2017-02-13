@@ -15,7 +15,7 @@ by voting.
 where confirmed by other programs, and lower if it tends to deviate from the 
 majority of the of the programs.
 
-- The accuracy of a predictor is proportion to the weight it receives.
+- The accuracy of a predictor is proportional to the weight it receives.
 
 **Table 1.**Example of a dataset with results from three different predictions for the same protein. 
 
