@@ -5,10 +5,17 @@
 
 CoVIRA (Consensus by Voting with Iterative Re-weighting based on  Agreement) is an algorithm to generate a consensus prediction based on the results from independent binary predictors by using an unsupervisioned and iterative weighted-voting system. Different from supervisioned ensemble learning methods, such as AdaBoost, CoVIRA doesn't require a dataset for training, as it is based on the measure of the "agreement" between the predictor. As we have no prior knownledge of accuracy of each predictor, we assume that the most accurate will be confirmed more times than those with smaller accuracy, requiring that the degree of accuracy in the set of predictors must be uniform. The algorithm was empirically designed on top of four logical postulates:
 
-- Each predictor may have it's own accuracy, although it is not possible to define it without a prior evaluation or by considering just a single entry.
-- The more predictors are used, more likely it is to achieve a reliable prediction by voting.
-- As mo
-- The accurarcy of a predictor is proportion to 
+- Each predictor may have it's own accuracy. Therefore, an naive voting may be 
+more likely to generate dubios results if compared to an weighted voting.
+
+- The more predictors are used, more likely it is to achieve a reliable prediction 
+by voting.
+
+- The weight a predictor receives in the voting must be higher if its results 
+where confirmed by other programs, and lower if it tends to deviate from the 
+majority of the of the programs.
+
+- The accuracy of a predictor is proportion to the weight it receives.
 
 **Table 1.**Example of a dataset with results from three different predictions for the same protein. 
 
