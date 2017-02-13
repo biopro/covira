@@ -1,5 +1,9 @@
 **CoVIRA: Consensus by Voting with Iterative Re-weighting based on Agreement**
 
+Frederico S. Kremer, André Alex Grassmann & Luciano da Silva Pinto
+
+*contact: fred.s.kremer@gmail.com*
+
 *About*
 
 
