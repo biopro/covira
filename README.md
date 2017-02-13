@@ -7,7 +7,6 @@ CoVIRA (Consensus by Voting with Iterative Re-weighting based on  Agreement) is 
 
 **Table 1.**Example of a dataset with results from three different predictions for the same protein. 
 
-|Protein ID | Predictor 1 | Predictor 2 | Predictor 3 |
 |:---------:|:-----------:|:-----------:|:-----------:|
 |LIC10010   |	        1 |           0 |           0 |
 |LIC10011   |           0 |           1 |           0 |
@@ -27,7 +26,6 @@ In this example it is possible to see that the results from the Predictor 1 were
 
 Based on the weights calculated for each predictor it is possible to perform an weighted voting and select those results that are more likely to be negatives or positives (eg:threshold = 0.5). 
 
-|Protein ID  | Predictor 1 | Predictor 2 | Predictor 3 | CoVIRA score |
 |:----------:|:-----------:|:-----------:|:-----------:|:------------:|
 |LIC10010    |	         1 |           0 |           0 | 0.1875       |
 |LIC10011    |	         0 |           1 |           0 | 0.375        |
