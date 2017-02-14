@@ -1,6 +1,6 @@
 **CoVIRA: Consensus by Voting with Iterative Re-weighting based on Agreement**
 
-Frederico Schmitt Kremer, André Alex Grassmann & Luciano da Silva Pinto
+Frederico Schmitt Kremer, André Alex Grassmann, Alan John Alexander McBride & Luciano da Silva Pinto
 
 *Laboratório de Bioinformática e Proteômica,*
 *Centro de Desenvolvimento Tecnológico,* 
